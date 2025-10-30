@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Recommendation System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Book Recommendation System</h1>
+    <p>Select a genre to get book recommendations!</p>
+
+    <select id="genre">
+      <option value="">-- Select Genre --</option>
+      <option value="fiction">Fiction</option>
+      <option value="science">Science</option>
+      <option value="history">History</option>
+      <option value="selfhelp">Self-Help</option>
+    </select>
+
+    <button id="recommendBtn">Get Recommendations</button>
+
+    <div id="recommendations"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
