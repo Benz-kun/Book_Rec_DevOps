@@ -1,0 +1,33 @@
+name: Simple CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Install dependencies (if any)
+      - name: Install dependencies
+        run: |
+          echo "No dependencies to install. Ready to build!"
+
+      # Step 3: Build Docker image
+      - name: Build Docker image
+        run: |
+          echo "Building Docker image..."
+          docker build -t bookrec-app:latest ./app
+
+      # Step 4: Simulate deployment
+      - name: Simulate deployment
+        run: |
+          echo "✅ Build successful!"
+          echo "🚀 (Simulation) App would be deployed now."
